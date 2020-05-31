@@ -1,0 +1,33 @@
+
+/*Esta archivo .css se encarga de contener la barra de navegación
+ superior de la pagina asi como su estilo y estructura*/
+ 
+.navbar{/*Esta es la clase definida para la barra de navegación en general*/
+    width: 100%;/*Teniendo un tamaño horizontal del tamaño total de la pagina*/
+    background-color:#222;/*Color de la barra de navegación*/
+    height: 70px; /*Tamaño vertical de la barra*/
+    color: #fff;/*Color del texto*/
+    position: fixed;/*Instrucción que permite que la barra de navegación siempre sea mostrada en pantalla*/
+}
+.navbar .logo{/*Logo encontrada en la barra de navegación*/
+    float: left;/*Instrucción para situarlo a la izquierda*/
+    height: 30px;/*Tamaño de la imagen*/
+    padding: 16px 32px;/*Distancia general de la imagen*/
+    background-image: url(../img/favicon_logo.png);/*Ruta de la imagen*/
+    background-size: cover;/*Instrucción para que la imagen sea cubierta en todo el espacio asignado*/
+}
+.navbar>ul>li{/*Alineación de la lista de los links*/
+    float: right;/*Alineación de los links de lado derecho*/
+}
+.nav_item{/*Clase que contiene los "a" o links de la pagina*/
+    display: inline-block;/*Instrucción que permite mostrar el texto dentro de un bloque, por defecto del mismo color de la barra de navegacion*/
+    padding: 15px 20px;/*Dimensiones generales del bloque*/
+    height: 40px;/*Tamaño vertical del bloque*/
+    line-height: 40px;/*Tamaño de la linea*/
+    color: #fff;/*Color del texto del link*/
+    text-decoration: none;/*Instrucción para quitar la decoración o la linea subrayada de los vínculos*/
+}
+.nav_item:hover{/*Acción cuando el mouse pasa sobre el bloque o los links*/
+    background-color: #444;/*Cambio de color mas claro en el bloque creado de los links*/
+ 
+}

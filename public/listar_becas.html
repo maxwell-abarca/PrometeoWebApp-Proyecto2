@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/listar_becas.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <title>Visualizar Becas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion">Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+        </nav>
+    </header>
+
+    <main>
+        <div id="form_contenedor">
+            <h1 id="titulo_registro">Lista de becas.</h1>
+            <!-- <p id="info_p">En la siguiente lista podrá ver las diferentes actividades del centro educativo, cada una
+                posee un nombre, la fecha y la hora en que se realizan, el lugar donde se realizaran, una descripción en
+                la cual se detalla en que consiste dicha actividad.</p> -->
+            <!-- <hr> -->
+            <label for="txt_filtro">Filtrar</label>
+            <input type="text" id="txt_filtro_beca" onkeyup="filtrar_beca();">
+            <table id="tbl_becas">
+                <thead>
+                    <tr>
+                        <th>Nombre de la beca</th>
+                        <th>Tipo de beca</th>
+                        <th>Descripción de la beca</th>
+                        <th>Editar y eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <form id="contenedor_botones">
+                <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+
+            </form>
+    </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/servicio_becas.js"></script>
+<script src="js/controlador_listar_becas.js"></script>
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_direccion.js"></script>
+
+
+</html>

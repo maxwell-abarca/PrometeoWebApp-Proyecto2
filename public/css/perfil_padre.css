@@ -1,0 +1,88 @@
+#html , body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #2c2c54;
+}
+
+#perfil{
+    display: block;
+    width: 75%;
+    height: 800px;
+    margin: auto;
+     background-color: #fff;
+}
+#nombre_titulo{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: #2c2c54;
+}
+li{
+    font-size: 40px;   
+    color: #3498db; 
+    margin:40px;
+}
+#imagen_contain{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+}
+#imagen_usuario{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    border: solid 5px #3498db;
+    object-fit: cover;
+}
+#left_info{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+    
+#right_info{
+    float: right;
+    width: 60%;
+    height: 100%;
+    
+}
+#nombre_usuario{
+    text-align: center;
+    font-size: 50px;   
+    color:#3498db;
+} 
+i{
+    font-size: 50px;    
+}
+
+#boton_editar, #boton_eliminar{
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#boton_eliminar{
+    float: left;
+    background-color: #e74c3c;
+}
+#boton_editar{
+    float: right;
+    background-color: #3498db;
+}
+.contenedor_botones{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 40px;
+}

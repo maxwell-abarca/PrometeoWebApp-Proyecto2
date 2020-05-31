@@ -1,0 +1,158 @@
+.error_input{
+    border: 2px solid red;
+}
+
+html,button{
+    /* font-size: 25px; hace que el sweet alert se haga mas grande */ 
+    font-family: 'PT Sans', sans-serif;  
+    margin-bottom: 10px;
+    background-color: #c0dfd9;
+}
+
+#logo{
+    
+    margin-left: 41%;/*Corrección-> estaba en 550px*/
+    width: 20%;
+    height: 15%;
+}
+
+#contenedor_logo{
+    background-color: #3b3a36;
+}
+
+/* .contenedor2{
+    background-color: #6B6E70;
+    padding: 4%;
+    color: #fff;
+}
+
+#formulario{
+    width: 22%;
+    padding: 8px;
+    margin-left: 40%;
+    border-color: #222629;
+    outline-color: #FF9800;
+}
+
+h1{
+    margin-top: 2px;
+    font-size: 30px;
+
+}
+
+#btn_buscar{
+    margin-left: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+#btn_buscar:hover{
+    background-color: #EF6C00;
+}
+
+li{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 3%;
+      /* background-color: #6B6E70;
+    padding: 7px;
+} */
+
+
+
+h1{
+    text-align: center;
+    font-size: 55px; 
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #3b3a36;
+}
+
+#contenedor{
+    font-family: 'PT Sans', sans-serif;  
+    background-color: #b3c2bf;
+    padding: 35px;
+    width: 40%;
+    margin-left: 30%;
+    color: #3b3a36;
+    font-size: 20px;
+    border: 2px solid #3b3a36;
+}
+
+input{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#frm_citas textarea{
+    font-family: 'PT Sans', sans-serif;  
+    width: 56%;
+    height: 40%px;
+    resize: none;
+}
+
+
+#frm_citas label{
+    display: inline-block;
+    width: 200px;
+
+}
+
+#frm_citas input{
+    border-radius: 5px;
+    display: inline-block;
+    width: 35%;
+    margin-bottom: 20px;
+}
+
+input{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    outline-color: #3b3a36;
+}
+
+textarea{
+    margin-top: 20px;
+    padding-bottom: 85px;
+    outline-color: #3b3a36;
+
+}
+
+#txt_descripcion{
+    margin-top: 10px;
+}
+
+#titulo_contenedor{
+    background-color: #e9ece5;
+    padding: 35px;
+    width: 40%;
+    margin-left: 30%;
+    color: #3b3a36;
+    font-size: 20px;
+    border: 2px solid #3b3a36;
+}
+
+#btn_registrar_cita{
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn_registrar_cita:hover{
+    background-color: #3b3a36 ;
+    color: #e9ece5;
+}
+
+#frm_citas input::placeholder{
+    font-size: 12px;
+  
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Solicitar cita al centro educativo</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="css/registrar_citas.css">
+        <link rel="stylesheet" href="css/barra_navegacion.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        
+            <header>
+                <nav class="barra_navegacion">
+                    <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+                    <!--Visitante-->
+                    <a href="http://localhost:3000/public/registro_padre.html">Registro Padre</a>
+                    <a href="http://localhost:3000/public/registro_institucion.html">Registro Institución</a>
+                    <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar Sesión</a>
+                    <!--Conectado-->
+                    <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+                    <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                    <a onclick="cerrar_sesion()" id ="btn_cerrar_sesion">Cerrar Sesión</a><script type="text/javascript">
+                        function cerrar_sesion(){
+                        sessionStorage.clear();
+                        window.location.href='index.html';
+                    }
+                </script>
+                </nav>
+            </header>
+
+        <form name="formulario" id="frm_citas">
+            <h1>Solicitar cita</h1>
+
+            <div id="titulo_contenedor">
+                    <label for="txt_nombre_cita">Nombre de la cita:</label>
+                    <input type="text" id="txt_nombre_cita" placeholder="Escribe el motivo de la cita">
+            </div>
+
+                <div id="contenedor">
+                    
+                    <div>
+                        <label for="txt_nombre_familiar">Nombre del familiar:</label>
+                        <input type="text" id="txt_nombre_familiar" placeholder="familiar que irá a la cita">
+                    </div>
+                    <div>
+                        <label for="dt_fecha">Fecha para la cita:</label>
+                        <input type="date" id="dt_fecha">
+                    </div>
+                    <div>
+                        <label for="tm_hora">Hora para la cita:</label>
+                        <input type="time" id="tm_hora">
+                    </div>
+                    <div>
+                        <label for="txt_descripcion">Descripción de la cita:</label>
+                        <textarea id="txt_descripcion" placeholder="Escribe brevemente de que trata la cita"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="button" id="btn_registrar_cita" value="Enviar cita">
+                    </div>
+                </div>
+
+        </form>
+
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script> 
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <!-- <script src="js/controlador_inicio.js"></script> -->
+    <script src="js/servicio_citas.js"></script>
+    <script src="js/controlador_registrar_citas.js"></script>
+</html>

@@ -1,0 +1,87 @@
+#html{
+    font-family: 'PT Sans', sans-serif;
+    
+}
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.barra_navegacion{
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color:rgb(71, 71, 135);
+    z-index: 1;
+}
+.imagen_barra_navegacion{
+    display: inline;
+    float: left;
+    background: url("../img/Prometeo_logo.png");
+    background-size: cover;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-left: 15px;  
+    width: 208px;
+    height: 40px;
+    cursor: pointer;
+}
+/*.conectado{
+    width: 220px;
+    height: 70px;
+    float: right;
+
+}
+.imagen_conectado{
+    display: block;
+    margin-top:7px; 
+    margin-right:7px;
+    width: 50px;
+    height: 50px;
+    float: right;
+    border: solid 3px;
+    border-radius: 100px;
+    background-color: red;
+}
+.nombre_conectado{
+    text-align: center;
+    font-size: 30px;
+}*/
+.barra_navegacion a{    
+    padding: 28px;
+    float: right;   
+    padding-top: 25px;  
+    vertical-align: middle; 
+    text-align: center;
+    font-size: 17px;
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+}
+#div_registro{
+    display: block;
+    width: 170px;
+    height: 45px;
+    float: right;   
+    padding-top: 25px;  
+    vertical-align: middle; 
+    text-align: center;
+    font-size: 20px;    
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    background-color: #ffffff;  
+}
+#div_registro:hover{
+    display: none;
+}
+#a_registro_padre{
+    display: none;
+    width: 170px;
+    height: 45px;
+}
+.barra_navegacion a:hover{
+    background-color: rgb(105, 105, 135);  
+    color: #ffffff;
+}
+

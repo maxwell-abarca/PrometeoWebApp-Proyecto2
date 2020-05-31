@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/eliminar_material_informativo.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Eliminar material informativo</title>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion" style="position:fixed">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
+                    style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+            <style type="text/css">
+                .estilo_imagen {
+                    border-radius: 100px;
+                }
+            </style>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+    <div id="form_contenedor">
+        <form id="frm_material_informativo">
+            <h1 id="titulo_registro">Eliminar material informativo.</h1>
+
+            <p id="info_p">Puede eliminar el material informativo que el centro educativo tiene.</p>
+            <hr>
+
+            <label for="txt_reglamento">Reglamento de la institución</label>
+            <textarea class="class_textarea" id="txt_reglamento" disabled="disabled"></textarea>
+
+
+            <label for="txt_proceso_matricula">Proceso de matrícula</label>
+            <textarea class="class_textarea" id="txt_proceso_matricula" disabled="disabled"></textarea>
+
+
+            <label for="txt_sistema_evaluacion">Sistema de evaluación</label>
+            <textarea class="class_textarea" id="txt_sistema_evaluacion" disabled="disabled"></textarea>
+
+            <label for="txt_recomendaciones">Recomendaciones</label>
+            <textarea class="class_textarea" id="txt_recomendaciones" disabled="disabled"></textarea>
+
+            <label for="txt_areas_informativas">Áreas informativas</label>
+            <textarea class="class_textarea" id="txt_areas_informativas" disabled="disabled"></textarea>
+
+            <label for="txt_seccion_ayuda">Sección de ayuda</label>
+            <textarea class="class_textarea" id="txt_seccion_ayuda" disabled="disabled"></textarea>
+
+            <label for="txt_talleres_adicionales">talleres adicionales</label>
+            <textarea class="class_textarea" id="txt_talleres_adicionales" disabled="disabled"></textarea>
+
+            <label for="txt_deportes">Deportes</label>
+            <textarea class="class_textarea" id="txt_deportes" disabled="disabled"></textarea>
+
+            <hr>
+
+            <label for="txt_informacion_adicional">Aregar más información (Campo opcional)</label>
+            <textarea class="class_textarea" id="txt_informacion_adicional" disabled="disabled"></textarea>
+
+            <div class="contenedor_botones">
+                <button class="btn_registrar" type="button" id="btn_registrar">Eliminar</button>
+                <button class="btn_atras" type="button" id="btn_atras"
+                    onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+            </div>
+
+    </div>
+    </form>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_material_informativo.js"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/controlador_eliminar_material_informativo.js"></script>
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_imagen_sesion.js"></script>
+<script src="js/controlador_direccion.js"></script>
+</body>
+
+</html>

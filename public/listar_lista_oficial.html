@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista oficial de útiles</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/listar_lista_oficial.css">
+</head>
+
+<body>
+    <h1>Lista de útiles oficial del MEP</h1>
+    <div id="div_registro">
+
+            <label for="slt_nivel">Nivel:</label>
+            <select id="slt_nivel">
+                <option value="Preescolar">Preescolar</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria">Secundaria</option>
+            </select>
+
+            <table id="tbl_lista_oficial">
+                <thead>
+                    <tr>
+                        <th>Útil</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_lista_oficial.js"></script>
+<script src="js/controlador_listar_lista_oficial.js"></script>
+<script src="js/controlador_direccion.js"></script>
+
+</html>

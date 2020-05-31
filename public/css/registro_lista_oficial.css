@@ -1,0 +1,74 @@
+html{
+    font-family: 'PT Sans', sans-serif;
+    color: #e9ece5;
+}
+
+body{
+    background-color: #3b3a36;
+    font-size: 18px;
+}
+
+#div_registro{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#columna_izquierda{
+    float: left;
+    background-color: #b3c2bf;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    padding-top: 3%;
+    border-radius: 25px;
+}
+
+#columna_derecha{
+    clear: both;
+    display: inline-block;
+    background-color: #b3c2bf;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    padding-right: 5%;
+    padding-top: 4%;
+    border-radius: 25px;
+}
+
+#columna_derecha td{
+    padding: 1px;
+}
+
+tr{
+    padding: 1%;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    color: #e9ece5;
+    margin: 18px;
+    font-size: 30px;
+}
+
+#btn_registrar{
+    color: #3b3a36;
+    float: right;
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btn_registrar button:hover{
+    color: #3b3a36;
+    background-color: #b3c2bf;
+}
+
+.error_input{
+    border: 2px solid red;
+}

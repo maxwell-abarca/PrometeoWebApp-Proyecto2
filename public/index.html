@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="stylesheet" href="css/pie_de_pagina.css">
+    <link rel="stylesheet" href="css/buscar_informacion_index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Prometeo</title>
+</head>
+
+<body onload="herramientas()" onload="sort_age()">          
+
+    <!--Contenido de la Pagina-->
+
+    <header>
+            <nav class="barra_navegacion">
+                <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+                <!--Visitante-->
+                <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+                <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
+                <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+                <!--Conectado-->
+                <a href="http://localhost:3000/public/perfil.html"><i class="fas fa-id-card-alt"></i> Perfil</a>
+                <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+                <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+                <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+                <script type="text/javascript">
+                    function cerrar_sesion() {
+                        sessionStorage.clear();
+                        window.location.href = 'index.html';
+                    }
+                </script>
+                <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+            </nav>
+        </header>
+
+        <div id="contenedor_imagen">
+            <div id="prometeo_imagen" ></div>
+        </div>
+            <div class="mejores_instituciones">
+                    <h1 id="titulo_registro">Ranking de las mejores instituciones por los usuarios</h1>
+                    <table id="tbl_instituciones_m">
+
+                            <thead>
+                                    <th>Nombre</th>
+                                    <th>Estrellas</th>
+                            </thead>
+                            <tbody id="table1">
+
+                            </tbody>
+                        </table>  
+            </div>
+
+
+
+            <div id="listas_de_institucion">
+                <h1 id="titulo_herrramientas">Herramientas del centro educativo.</h1>
+                <div class="container">
+
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1"><i class="fas fa-pencil-ruler"></i>
+                            Útiles</li>
+                        <li class="tab-link" data-tab="tab-2">
+                            <i class="far fa-futbol"></i> Actividades</li>
+                        <li class="tab-link" data-tab="tab-3"><i class="far fa-question-circle"></i>Preguntas frecuentes
+                        </li>
+                        <li class="tab-link" data-tab="tab-4"><i class="fas fa-globe-americas"></i> Idiomas</li>
+                        <li class="tab-link" data-tab="tab-5"><i class="fas fa-coins"></i> Costos</li>
+                        <li class="tab-link" data-tab="tab-6"><i class="far fa-newspaper"></i> Noticias</li>
+                        <li class="tab-link" data-tab="tab-7"><i class="fas fa-info"></i> Material Informativo</li>
+                        <li class="tab-link" data-tab="tab-8"><i class="fas fa-tags"></i> Etiquetas</li>
+                        <li class="tab-link" data-tab="tab-9"><i class="fas fa-hands-helping"></i> Becas</li>
+                        <li class="tab-link" data-tab="tab-10"><i class="fas fa-child"></i> Niveles</li>
+                    </ul>
+
+
+                    <div id="tab-1" class="tab-content current">
+                        En esta sección, se puede registrar y visualizar las listas de útiles que son requeridas 
+                        en el respectivo centro educativo, las cuales podrán ser visualizadas por los padres de familia y con ello pueden estar al pendiente de los materiales que necesesitan los estudiantes.
+
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_utiles.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Visualizar</button>
+                        </div>
+
+                    </div>
+                    
+                    <div id="tab-2" class="tab-content">
+                        En esta sección, el centro educativo puede indicar las actividades que la institución asigna así como visualizar dichas actividades, con la finalidad de que los padres de familia
+                        estén enterados de dichos eventos de la institución, y puedan disfrutar de las actividades.
+                        
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-3" class="tab-content">
+                        En esta sección, el centro educativo puede escoger las preguntas que hacen los padres de familia y que son más habituales en el centro educativo y de esta manera poder visualizarlas, para que los encargados de los estudiantes 
+                        puedan resolver sus interrogantes, de manera más fácil y rápida.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_seccion_preguntas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-4" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar todos los idiomas que imparten en la institución.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_idiomas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_idioma.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-5" class="tab-content">
+                        En esta seción, el centro educativo puede registrar y visualizar los costos de la matrícula, así como la mensualidad que le corresponde al respectivo nivel de educación del estudiante.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_matriculas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_costos.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-6" class="tab-content">
+                        En esta sección, el centro educativo puede registrar hechos recientes que han sucedido en la respectiva institución, para que los estudiantes y padres de familia puedan visualizar las noticias y estar al pendiente de dichos eventos.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_noticias.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_noticias.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-7" class="tab-content">
+                        En esta sección, el centro educativo puede registrar la información que sea de gran aporte para los padres de familia y estudiantes.Por ejemplo: el reglamento de la institución, áreas informativas, talleres adicionales, entre otra información a destacar.
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_material_informativo.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_material_informativo.html'">Visualizar</button>
+                        </div>
+
+                    </div>
+
+                    <div id="tab-8" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar y visualizar las etiquetas que destacan a la respectiva institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_etiquetas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_etiquetas.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-9" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar y visualizar las becas que están asociadas a la propia institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_becas.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_becas.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="tab-10" class="tab-content">
+                        En esta sección, los centros educativos pueden registrar y visualizar las becas que están asociadas a la propia institución. 
+
+                        
+                        <div class="contenedor_botones">
+                            <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_nivel.html'">Registrar</button>
+                            <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_nivel.html'">Visualizar</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- <div id="seccion">
+                
+                                <div class="button" >
+                                    <div class="button_registro"><i id="icon" class="far fa-eye"></i></div>
+                                    <div class="button_listar"></div>
+                                    <div class="button_descripcion"></div>
+                                </div>
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_utiles.html'">Registro de Utiles</button>
+                                <div class="button" >
+                                        <h1 id="icon_text">Registro de Útiles</h1>
+                                </div>
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Ver Lista de útiles</button>
+                        </div> 
+
+        
+                        <div id="seccion">
+
+                            
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_seccion_preguntas.html'">Registrar preguntas</button>
+                    
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Sección de preguntas Frecuentes</button>
+                                
+                        </div>
+        
+                        <div id="seccion">
+
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar actividades</button>
+                    
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar actividades</button>        
+                        </div>
+        
+                        <div id="seccion">
+
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_citas.html'">Registrar citas</button>
+                            
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_citas.html'">Visualizar citas</button>
+                        </div>
+                        <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_noticias.html'">Registrar noticias</button>
+                    
+                        <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_noticias.html'">Visualizar noticias</button> -->
+
+            </div>
+            <div id="herramientas_admin">
+                    <h1 id="titulo_herrramientas">Herramientas del administrador.</h1>
+                    <div class="container">
+    
+                        <ul class="tabs_admin">
+                            <li class="tab-link actual" data-tab_admin="tab-1_admin"><i class="fas fa-trophy"></i> Ranking</li>
+                            <li class="tab-link" data-tab_admin="tab-2_admin"><i class="fas fa-pencil-ruler"></i> Útiles</li>
+                            <li class="tab-link" data-tab_admin="tab-3_admin"><i class="fab fa-wpforms"></i> Criterios de evaluación</li>
+                            <li class="tab-link" data-tab_admin="tab-4_admin"><i class="fas fa-search"></i> Buscar</li>
+                            
+                        </ul>
+    
+    
+                        <div id="tab-1_admin" class="contenido_tab actual">
+                            En esta sección, se puede registrar y visualizar las listas de útiles que son requeridas 
+                            en el respectivo centro educativo, las cuales podrán ser visualizadas por los padres de familia y con ello pueden estar al pendiente de los materiales que necesesitan los estudiantes.
+    
+                            <div class="contenedor_botones">
+                                <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registro_ranking_mep.html'">Registrar</button>
+                                <!-- <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Visualizar</button> -->
+                            </div>
+    
+                        </div>
+                        
+                        <div id="tab-2_admin" class="contenido_tab">
+                            En esta sección, el centro educativo puede indicar las actividades que la institución asigna así como visualizar dichas actividades, con la finalidad de que los padres de familia
+                            estén enterados de dichos eventos de la institución, y puedan disfrutar de las actividades.
+                            
+                            
+                            <div class="contenedor_botones">
+                                <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_lista_utiles_mep.html'">Registrar</button>
+                                <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_utiles_mep.html'">Visualizar</button>
+                            </div>
+    
+    
+                        </div>
+    
+                        <div id="tab-3_admin" class="contenido_tab">
+                            En esta sección, el centro educativo puede escoger las preguntas que hacen los padres de familia y que son más habituales en el centro educativo y de esta manera poder visualizarlas, para que los encargados de los estudiantes 
+                            puedan resolver sus interrogantes, de manera más fácil y rápida.
+    
+                            
+                            <div class="contenedor_botones">
+                                <button type="button" class="btn_registrar" onclick="window.location.href='http://localhost:3000/public/registrar_criterios_evaluaciones.html'">Registrar</button>
+                                <button type="button" class="btn_visualizar" onclick="window.location.href='http://localhost:3000/public/listar_criterios.html'">Visualizar</button>
+                            </div>
+    
+    
+                        </div>
+                        
+                        <div id="tab-4_admin" class="contenido_tab">
+                            En esta sección, el centro educativo puede escoger las preguntas que hacen los padres de familia y que son más habituales en el centro educativo y de esta manera poder visualizarlas, para que los encargados de los estudiantes 
+                            puedan resolver sus interrogantes, de manera más fácil y rápida.
+    
+                            <input id="txtBusqueda" type="text" onkeyup="Buscar();">
+                            <div class="container_table">
+                                <table id="tbl_instituciones">
+        
+                                    <thead>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Provincia</th>
+                                            <th>Tipo</th>
+                                            <th>Calificación</th>
+                                            <th>Visitar</th>
+                                            <th>Eliminar</th>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+    
+    
+                        </div>
+    
+    
+                    </div>
+    
+                    <!-- <div id="seccion">
+                    
+                                    <div class="button" >
+                                        <div class="button_registro"><i id="icon" class="far fa-eye"></i></div>
+                                        <div class="button_listar"></div>
+                                        <div class="button_descripcion"></div>
+                                    </div>
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_utiles.html'">Registro de Utiles</button>
+                                    <div class="button" >
+                                            <h1 id="icon_text">Registro de Útiles</h1>
+                                    </div>
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_utiles.html'">Ver Lista de útiles</button>
+                            </div> 
+    
+            
+                            <div id="seccion">
+    
+                                
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_seccion_preguntas.html'">Registrar preguntas</button>
+                        
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Sección de preguntas Frecuentes</button>
+                                    
+                            </div>
+            
+                            <div id="seccion">
+    
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_actividades.html'">Registrar actividades</button>
+                        
+                                    <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_actividades.html'">Visualizar actividades</button>        
+                            </div>
+            
+                            <div id="seccion">
+    
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_citas.html'">Registrar citas</button>
+                                
+                                <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_citas.html'">Visualizar citas</button>
+                            </div>
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/registrar_noticias.html'">Registrar noticias</button>
+                        
+                            <button type="button" onclick="window.location.href='http://localhost:3000/public/listar_noticias.html'">Visualizar noticias</button> -->
+    
+                </div>
+            <div class="ranking_mep">
+                <h1 id="titulo_registro">Ranking de las mejores instituciones por el MEP</h1>
+                <table id="tbl_ranking_mep"">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Posición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="info">
+                <div id="info_carta">
+                    <div class="info_imagen" id="imagen_1"></div>
+                    <h1 id="info_texto">Encuentra el mejor centro educativo para tus hijos.</h1>            <div id="listas_usuarios">
+
+                        </div>
+                </div>
+                <div id="info_carta">
+                    <div class="info_imagen" id="imagen_2"></div>
+                    <h1 id="info_texto">La herramienta del MEP para la implementación de los centros educativos en la
+                        red.</h1>
+                </div>
+                <div id="info_carta">
+                    <div class="info_imagen" id="imagen_3"></div>
+                    <h1 id="info_texto">Localiza tu institución favorita, con los servicios que más te gusten.</h1>
+                </div>
+                <div id="info_carta">
+                    <div class="info_imagen" id="imagen_4"></div>
+                    <h1 id="info_texto">Descubre instituciones a lo largo del país.</h1>
+                </div>
+            </div>
+            <!--Pie de Pagina-->
+            <div id="pie_de_pagina">
+                <div id="pie_de_pagina_carta">
+                    <div class="pie_de_pagina_imagen" id="pie_de_pagina_nosotros"></div>
+                    <h1 id="info_pie_de_pagina">Sobre nosotros</h1>
+                    <p>Somos un equipo emprendedor y dedicado en crear soluciones innovadores por medio del software.
+                    </p>
+                </div>
+                <div id="pie_de_pagina_carta">            <div id="listas_usuarios">
+
+                    </div>
+                    <div class="pie_de_pagina_imagen" id="pie_de_pagina_contacto"></div>
+                    <h1 id="info_pie_de_pagina">Contacto</h1>
+                    <ul>
+                        <li>koelcenfo@gmail.com</li>
+                        <a id="koel_link" href="http://localhost:3000/public/Koel/Koel.html">Ir a Koel</a>
+                    </ul>
+                </div>
+                <div id="pie_de_pagina_carta">
+                    <div class="pie_de_pagina_imagen" id="pie_de_pagina_navegacion"></div>
+                    <h1 id="info_pie_de_pagina">Navegación</h1>
+                    <ul>
+                        <li><a href="http://localhost:3000/public/index.html">Inicio</a></li>
+                        <li><a href="http://localhost:3000/public/registro_padre.html">Registro padre de familia</a>
+                        </li>
+                        <li><a href="http://localhost:3000/public/registro_institucion.html">Registro centros
+                                educativos</a></li>
+                    </ul>
+                </div>
+                <div id="pie_de_pagina_carta">
+                    <div class="pie_de_pagina_imagen" id="pie_de_pagina_mep"></div>
+                    <ul>
+                        <li><a href="https://www.mep.go.cr/">Ministerio de Educación Pública</a></li>
+                        <li><a
+                                href="https://www.facebook.com/Ministerio-de-Educaci%C3%B3n-P%C3%BAblica-MEP-132635836805605/">Facebook
+                                del MEP</a></li>
+                        <li><a href="https://twitter.com/mep_cr?lang=es">Twitter del MEP</a></li>
+                    </ul>
+                </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/servicio_inicio.js"></script>
+        <script src="js/servicio_utiles.js"></script>
+        <script src="js/servicio_ranking_mep.js"></script>
+        <script src="js/servicio_registrar_etiqueta.js"></script>
+        <script src="js/servicio_estrellas.js"></script>
+        <script src="js/controlador_listar_ranking_mep.js"></script>
+        <script src="js/controlador_listar_mejores.js"></script>
+        <script src="js/controlador_barra_navegacion.js"></script>
+        <script src="js/controlador_index.js"></script>
+        <!-- Controlador de la imagen de la barra de navegacion -->
+        <script src="js/controlador_imagen_sesion.js"></script>
+        <script src="js/buscar_informacion.js"></script>
+</html>

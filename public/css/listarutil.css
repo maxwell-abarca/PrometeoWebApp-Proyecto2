@@ -1,0 +1,176 @@
+html {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #2c2c54;
+}
+
+
+
+#form_contenedor {
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    padding-top: 70px;
+    width: 90%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#titulo_registro {
+    
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: #2c2c54;
+}
+
+#info_p {
+    text-align: center;
+    font-size: 22px;
+    color: rgb(151, 151, 151);
+    padding: 40px;
+}
+
+#tbl_utiles thead {
+    background-color: #2f3542;
+}
+
+#tbl_utiles tbody {
+    color: black;
+    border-right: 2px solid #000;
+}
+
+#tbl_utiles {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f1f2f6;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #2f3542;
+    border-style: ridge;
+    color: #fff;
+}
+
+#tbl_utiles td, #tbl_utiles th {
+    border-width: 1px;
+    border-color: #2f3542;
+    padding: 15px;
+}
+
+#tbl_utiles th {
+    
+    font-size: 20px;
+    color: #f1f2f6;
+    font-weight: bold;
+}
+
+#tbl_utiles td {
+    word-break: normal;
+    text-align: center;
+    font-size: 15px;
+    border-style: solid;
+    border-right: 2px solid #000;
+}
+
+#contenedor_botones {
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 100px;
+}
+
+/*Boton Atras*/
+
+#btn_atras{
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+  #btn_atras{
+    background-color: #e74c3c;
+  }
+
+#slt_util {
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    outline-color: #1abc9c;
+    text-align: center;
+}
+
+#txt_descripcion {
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #dfe4ea;
+    outline-color: #1abc9c;
+}
+
+#nmb_cantidad {
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    border: none;
+    outline-color: #1abc9c;
+    text-align: center;
+}
+
+.boton_editar{
+    margin-left: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* .boton_editar:hover{
+    background-color: #3498db;
+    } */
+    
+    .boton_eliminar{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* .boton_eliminar:hover{
+        background-color: #e74c3c;
+        } */

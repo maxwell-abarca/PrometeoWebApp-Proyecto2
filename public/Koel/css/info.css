@@ -1,0 +1,97 @@
+/*Este archivo .css contiene el estilo de la pagina de información de los miembros del equipo*/
+html{
+    /*Fuente utilizada en todo el html de la pagina de información del equipo*/
+    font-family: 'Montserrat', sans-serif;
+    background-color: #3d3d3d;
+    /*background: #3d3d3d;*/   
+}
+.div_img{ /*Espacio de la imagen de fondo*/
+    width: 100%;/*Ancho de la imagen principal*/
+    height: 400px; /*Altura de la imagen principal*/
+    background-image: url(../img/info_div_img.jpg);  /*Ruta de la imagen principal*/  
+    background-size: cover;/*Tamaño de la imagen que cubre el espacio asignado*/
+}
+.div_img h1{ /*Titulo principal*/
+    padding-top: 60px;/*Distancia en pixels desde arriba hasta el texto*/
+    text-align: center;/*Alineación central del texto*/
+    font-size: 150px  ;/*Tamaño del texto*/
+    color: white;/*Color del texto*/
+}
+
+.bio_top{ /*Apartado de las imágenes con la respectiva información*/
+  float: left;
+  background-color: #3d3d3d;/*Color del fondo*/
+    color:#fff;/*Color del texto*/
+    width: 33%;/*Ancho del espacio principal*/
+    height: 420px;/*Altura del espacio principal*/
+    word-break: normal;/*Instrucción para que las palabras colapsen al llegar a un borde*/
+    text-align: center; /*Alineación del texto hacia el centro*/
+ 
+}
+.bio_bottom{ /*Apartado de las imágenes con la respectiva información*/
+  float: left;
+  background-color: #3d3d3d;/*Color del fondo*/
+  color:#fff;/*Color del texto*/
+  width: 33%;/*Ancho del espacio principal*/
+  height: 420px;/*Altura del espacio principal*/
+  word-break: normal;/*Instrucción para que las palabras colapsen al llegar a un borde*/
+  text-align: center; /*Alineación del texto hacia el centro*/
+  }
+
+.bio_top h1, .bio_bottom h1{ /*Titulo con el nombre del integrante del equipo*/
+  display: block;
+  margin: auto;
+  font-size:32px;/*Tamaño de la fuente*/
+  width: 440px;
+  height: 30px;
+  background-color: #3b3a36;
+  border-radius: 100px;
+  margin-bottom: 5px;
+}
+.bio  #P_Info{ /*Párrafo con la información del integrante*/
+  padding-top: 30px;/*Distancia en pixels desde arriba hasta donde empieza el texto*/
+  font-size: 18px;/*Tamaño de la fuente del párrafo*/
+   padding-top: 30px;/*Distancia en pixels desde arriba hasta donde empieza el texto*/
+}
+#P_Pro_Con{
+  display: block;
+  margin: auto;
+  font-size:15px;/*Tamaño de la fuente*/
+  width: 440px;
+  height: 30px;
+  color: #3b3a36;
+  background-color: #c0dfd9;
+  border-radius: 100px;
+  margin-bottom: 5px;
+}
+.rol{
+  display: block;
+  margin: auto;
+  font-size:20px;/*Tamaño de la fuente*/
+  width: 440px;
+  height: 30px;
+  color: #3b3a36;
+  background-color: #b3c2bf;
+  border-radius: 100px; 
+  margin-bottom: 5px;
+}
+.correo{
+  display: block;
+  margin: auto;
+  font-size:15px;/*Tamaño de la fuente*/
+  width: 440px;
+  height: 30px;
+  color: #3b3a36;
+  background-color: #e9ece5;
+  border-radius: 100px;
+  margin-bottom: 5px;
+}
+.profile_img {/*Imagen de cada integrante del equipo*/
+    width: 150px;/*Tamaño del ancho de la imagen*/
+    height: 150px;/*Tamaño de la altura de la imagen*/
+    border-radius: 50%;/*Instrucción que permite mostrar la imagen en radio*/
+    margin: 30px;/*Margen de la imagen que tiene con otros elementos*/
+    object-fit: cover;/*Ajuste que permite que la imagen cubra el espacio del radio*/
+    object-position: center;/*Ajuste que permite mostrar la parte central de la imagen*/
+    
+  }

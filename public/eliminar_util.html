@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar útiles</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/eliminar_util.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion" style="position:fixed">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros
+                educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
+                    style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+            <style type="text/css">
+                .estilo_imagen {
+                    border-radius: 100px;
+                }
+            </style>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+
+    <h1>Eliminar útiles</h1>
+    <main id="contenido">
+        <p id="info_p">Puede eliminar el útil que ha sido registrado.</p>
+        <div id="formulario" disabled="disabled">
+            <form>
+                <div id="contenedor_niveles" disabled="disabled">
+
+                </div>
+                <div id="contenedor_util" disabled="disabled">
+
+                </div>
+                <div>
+                    <label for="txt_descripcion">Descripción</label>
+                    <textarea id="txt_descripcion" disabled="disabled"></textarea>
+                </div>
+                <div>
+                    <label for="nmb_cantidad">Cantidad</label>
+                    <input type="number" id="nmb_cantidad" disabled="disabled">
+
+                </div>
+
+                <div class="contenedor_botones">
+                    <button class="btn_atras" type="button" id="btn_atras"
+                        onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+
+                    <button type="button" id="btn_enviar">Eliminar</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/servicio_utiles.js"></script>
+    <script src="js/servicios_lista_utiles_mep.js"></script>
+    <script src="js/servicio_nivel.js"></script>
+    <script src="js/controlador_eliminar_util.js"></script>
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/controlador_imagen_sesion.js"></script>
+    <script src="js/controlador_direccion.js"></script>
+
+</body>
+
+</html>

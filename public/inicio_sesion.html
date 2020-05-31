@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">  
+    <link rel="stylesheet" href="css/inicio_sesion.css">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <header>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><i class="fas fa-id-card-alt"></i> Perfil</a>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+        <div id="inicio_sesion">
+            <h1 id="top_h">Iniciar sesión</h1>
+            
+            <label class="switch">
+                <h1 id="descripcion_switch_1">Padre de familia</h1>
+                <h1 id="descripcion_switch_2">Centro educativo</h1>
+                <input id="checkbox1" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+              
+              <div id="autoUpdate" class="autoUpdate">
+                <form  id="padre_familia">
+                    <div>
+                        <img class="img_inicio" src="img/inicio_sesion/padre.png" alt="">
+                        <label for="txt_padre_correo_electronico" id="padre_label">Correo electrónico</label>
+                        <input type="text" id="txt_padre_correo_electronico">
+                    </div>
+                    <div>
+                        <label for="txt_padre_contrasena"id="padre_label">Contraseña</label>
+                        <input type="password" id="txt_padre_contrasena">
+                    </div>
+                    <button class="btn_ingresar" type="button" id="btn_ingresar_padre">Ingresar</button>
+                    <button class="btn_atras" type="button">Atrás</button>
+                </form>
+             </div>
+             <form  id="institucion">
+                <div>
+                        <img class="img_inicio" src="img/inicio_sesion/centro_educativo.png" alt="">
+                        <label for="txt_institucion_correo_electronico"id="institucion_label">Correo electrónico</label>
+                        <input type="text" id="txt_institucion_correo_electronico">
+                    </div>
+                    <div>
+                        <label for="txt_institucion_contrasena"id="institucion_label">Contraseña</label>
+                        <input type="password" id="txt_institucion_contrasena">
+                    </div>
+            <button class="btn_ingresar" type="button" id="btn_ingresar_institucion">Ingresar</button>
+            <button class="btn_atras" type="button">Atrás</button>
+            </form>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_inicio.js"></script>
+    <script src="js/controlador_inicio.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link rel="stylesheet" href="css/listar_matricula.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <title>Visualizar costos de la matrícula por nivel</title>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion" style="position:fixed">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros
+                educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
+                    style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+            <style type="text/css">
+                .estilo_imagen {
+                    border-radius: 100px;
+                }
+            </style>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+    <main>
+        <h1 id="titulo_registro">Visualizar costos de matrícula </h1>
+        <div id="contenedor_formulario">
+            <label for="txt_filtro_costo">Filtrar</label>
+            <input type="text" id="txt_filtro_costo" onkeyup="filtrar_costo();">
+
+
+            <table id="tbl_costos">
+                <thead>
+                    <th>Nivel</th>
+                    <th>Matrícula</th>
+                    <th>Mensualidad</th>
+                    <th>Editar y eliminar</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div id="contenedor_botones">
+                <button class="btn_atras" type="button" id="btn_atras"
+                    onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_registro_matricula.js"></script>
+
+    <script src="js/controlador_listar_costos.js"></script>
+    <script src="js/controlador_barra_navegacion.js"></script>
+    <script src="js/controlador_imagen_sesion.js"></script>
+    <script src="js/controlador_direccion.js"></script>
+
+
+
+</body>
+
+</html>

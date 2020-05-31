@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Insertar Mapa</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro_padre.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?key=AIzaSyAUrAlEV8UDSXKjVVLC96k5vVCjEhYb9Hg&callback=initMap"></script>
+    <script>
+        function initMap() {
+            // Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+            var map = new google.maps.Map(document.getElementById('mapa'), {
+                center: { lat: 43.2686751, lng: -2.9340005 },
+                scrollwheel: false,
+                zoom: 8,
+                zoomControl: true,
+                rotateControl: false,
+                mapTypeControl: true,
+                streetViewControl: false,
+            });
+
+            map.setCenter({ lat: 37.3000, lng: -120.4833 });
+
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                // Creamos un objeto mapa y lo situamos en coordenadas actuales
+                var map = new google.maps.Map(document.getElementById('mapa'),
+                    {
+                        center: { lat: pos.coords.latitude, lng: pos.coords.longitude },
+                        scrollwheel: false,
+                        zoom: 8
+                    }
+                );
+            })
+
+            var map = new google.maps.Map(document.getElementById('mapa'), {
+                center: { lat: 43.2686751, lng: -2.9340005 },
+                scrollwheel: false,
+                zoom: 8,
+                zoomControl: true,
+                rotateControl: false,
+                mapTypeControl: true,
+                streetViewControl: false,
+            });
+            // Creamos dos marcadores.
+            var marker1 = new google.maps.Marker({
+                position: { lat: 43.2686751, lng: -2.9340005 },
+                draggable: false
+            });
+            // a este marcador le añadimos un icono personalizado
+            var marker2 = new google.maps.Marker({
+                position: { lat: 42.8286751, lng: -3.0990005 },
+                icon: "https://reviblog.net/wp-content/uploads/2017/03/marcador.png",
+                draggable: false
+            });
+            // Le asignamos el mapa a los marcadores.
+            marker1.setMap(map);
+            marker2.setMap(map);
+
+            google.maps.event.addListener(marker, 'dragend', function () {
+                alert('Latitud = ' + marker.getPosition().lat() + ', Longitud = ' + marker.getPosition().lng());
+            });
+
+            // Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+            var map = new google.maps.Map(document.getElementById('mapa'), {
+                center: { lat: 43.2686751, lng: -2.9340005 },
+                scrollwheel: false,
+                zoom: 8,
+                zoomControl: true,
+                rotateControl: false,
+                mapTypeControl: true,
+                streetViewControl: false,
+            });
+            // Creamos el marcador
+            var marker = new google.maps.Marker({
+                position: { lat: 43.2686751, lng: -2.9340005 },
+                draggable: true
+            });
+            // Le asignamos el mapa a los marcadores.
+            marker.setMap(map);
+            // creamos el objeto geodecoder
+            var geocoder = new google.maps.Geocoder();
+            // le asignamos una funcion al eventos dragend del marcado
+            google.maps.event.addListener(marker, 'dragend', function () {
+                geocoder.geocode({ 'latLng': marker.getPosition() }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var address = results[0]['formatted_address'];
+                        alert(address);
+                    }
+                });
+            });
+
+
+        }
+
+
+        mapa = {
+ map : false,
+ marker : false,
+
+ initMap : function() {
+
+ // Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+
+ mapa.map = new google.maps.Map(document.getElementById('mapa'), {
+   center: {lat: 43.2686751, lng: -2.9340005},
+   scrollwheel: false,
+   zoom: 14,
+   zoomControl: true,
+   rotateControl : false,
+   mapTypeControl: true,
+   streetViewControl: false,
+ });
+
+ // Creamos el marcador
+ mapa.marker = new google.maps.Marker({
+ position: {lat: 43.2686751, lng: -2.9340005},
+ draggable: true
+ });
+
+ // Le asignamos el mapa a los marcadores.
+  mapa.marker.setMap(mapa.map);
+
+ },
+
+// función que se ejecuta al pulsar el botón buscar dirección
+getCoords : function()
+{
+  // Creamos el objeto geodecoder
+ var geocoder = new google.maps.Geocoder();
+
+ address = document.getElementById('search').value;
+ if(address!='')
+ {
+  // Llamamos a la función geodecode pasandole la dirección que hemos introducido en la caja de texto.
+ geocoder.geocode({ 'address': address}, function(results, status)
+ {
+   if (status == 'OK')
+   {
+// Mostramos las coordenadas obtenidas en el p con id coordenadas
+   document.getElementById("coordenadas").innerHTML='Coordenadas:   '+results[0].geometry.location.lat()+', '+results[0].geometry.location.lng();
+// Posicionamos el marcador en las coordenadas obtenidas
+   mapa.marker.setPosition(results[0].geometry.location);
+// Centramos el mapa en las coordenadas obtenidas
+   mapa.map.setCenter(mapa.marker.getPosition());
+   agendaForm.showMapaEventForm();
+   }
+  });
+ }
+ }
+}
+    </script>
+</head>
+
+<body onload="initMap()">
+  
+    
+
+    
+</body>
+
+
+
+</html>

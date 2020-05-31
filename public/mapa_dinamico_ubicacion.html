@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocalización</title>
+    <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAUrAlEV8UDSXKjVVLC96k5vVCjEhYb9Hg"></script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUrAlEV8UDSXKjVVLC96k5vVCjEhYb9Hg&callback=initMap"
+    type="text/javascript"></script>
+</head>
+
+
+<body>
+    <h1>Mapa dinámico</h1>
+
+    <div id="mapa" style="width: 700px; height: 500px;">
+
+        Mapa de tú ubicación
+
+    </div>    
+
+
+    <script type="text/javascript">
+        //namespace--> es para pedir ciertos objectos desde google.maps.Algo
+
+        let  divMapa=document.getElementById('mapa');
+        navigator.geolocation.getCurrentPosition(fn_ok, fn_mal );
+
+        function fn_mal( ) { }  
+        function fn_ok (rta ) { 
+
+            let lat=rta.coords.latitude;
+        let lon=rta.coords.longitude;
+
+        //Crea las coordenadas en un objeto de google.
+        let gLatLon = new google.maps.LatLng(lat,lon);
+
+        //Para crear el mapa
+
+        let objConfig={ 
+
+            zoom: 17,
+            center: gLatLon
+
+        }
+
+        let gMapa= new google.maps.Map ( divMapa, objConfig);
+
+        let objConfigMarker={
+            //Objetos de google 
+            position: gLatLon,
+            map: gMapa,
+            title: "Tú ubicación"
+
+        }
+
+        let gMarker=new google.maps.Marker(objConfigMarker);
+
+
+        }        
+        
+        
+
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,136 @@
+#div_registro_comentarios{
+    display: block;
+    border-radius: 5px;
+    float: right;
+    margin: auto;
+    width: 740px;
+    height: 375px;
+    border: solid 1px rgb(231, 231, 231);
+    margin-right: 19%;
+    margin-top: 30px;
+}
+.error_input{
+    border:solid 1px red;
+}
+#div_registro_comentarios .comment label{
+    font-family: 'PT Sans', sans-serif;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    float: left;
+}
+#div_registro_comentarios #textarea_comentario{
+    font-family: 'PT Sans', sans-serif;
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 120px;
+    font-size: 22px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.comment{
+    display: block;
+    float: left;
+    width: 510px;
+    margin: auto;
+}   
+.rate{
+    display: block;
+    float: left;
+    width: 160px;
+    margin-top: 45px;
+}
+.rate label{
+    margin-left: 5px;
+}
+.padre_img{
+    display: block;
+    float: left;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 45px;
+}
+#enviar_comentario{
+    display: block;
+    float: right;
+    margin-right: 53px;
+    margin-top: 15px;  
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #3498db;
+}
+#listar_comentarios{
+    display: block;
+    float: left;
+    width: 100%;
+}
+#estrellas_calificas{
+    margin-top: 15px;
+    margin-left: 35px;
+}
+.comentario{
+    display: block;
+    width: 630px;
+    height: 200px;
+    border-bottom: solid 1px rgb(231, 231, 231);
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 17px;
+}
+.comentario .padre_img{
+    display: block;
+    float: left;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 10px;
+    object-fit: cover;
+}
+.comentario h1{
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.textarea_comentario{
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 120px;
+    resize: none;
+    border-radius: 5px;
+    max-height: 300px;
+    resize: none;
+    border-radius: 5px;
+    float: left;
+    margin: 5px;
+    border: none;
+    pointer-events: none;
+    font-size: 22px;
+    color: gray;
+    padding-left: 25px;
+    font-family: 'PT Sans', sans-serif;
+}
+.no_hay_comentarios{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(231, 231, 231);
+    margin-top: 45px;
+    margin-bottom: 45px;
+    border-bottom: solid 1px rgb(231, 231, 231);
+    padding-bottom: 58px;
+}

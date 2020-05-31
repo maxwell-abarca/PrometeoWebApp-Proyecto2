@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/eliminar_registros.css">
+    <title>Eliminar pregunta</title>
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion" style="position:fixed">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro
+                centros
+                educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png"
+                    style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+            <style type="text/css">
+                .estilo_imagen {
+                    border-radius: 100px;
+                }
+            </style>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+    <main>
+        
+        <div id="form_contenedor">
+                <h1 id="titulo_registro" >Eliminar sección de preguntas frecuentes.</h1>
+            <p id="info_p">En el siguiente registro podrá eliminar la pregunta frecuente.</p>
+            <hr>
+            <form>
+
+                <div>
+                    <label for="txt_pregunta">Pregunta:</label>
+                    <input class="class_input" type="text" id="txt_pregunta" disabled="disabled" >
+                </div>
+                <div>
+                    <label for="txt_respuesta">Respuesta:</label>
+                    <textarea class="class_textarea" id="txt_respuesta" disabled="disabled" ></textarea>
+                </div>
+                <div class="contenedor_botones">
+                    <button class="btn_atras" type="button" class="btn_atras"
+                        onclick="window.location.href='http://localhost:3000/public/listar_preguntas.html'">Atrás</button>
+                    <button type="button" id="btn_registrar">eliminar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="js/servicio_seccion_preguntas.js"></script>
+
+    <script src="js/controlador_eliminar_preguntas.js"></script>
+    
+    <script src="js/controlador_barra_navegacion.js"></script>
+
+    <script src="js/servicio_inicio.js"></script>
+
+    
+   
+    
+    
+    <script src="js/controlador_imagen_sesion.js"></script>
+    <script src="js/controlador_direccion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+#html , body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #2c2c54;;
+}
+#perfil{
+    display: block;
+    margin: auto;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    width: 95%;
+    min-height: 1247px;
+    background-color: #fff;
+    
+}
+#side_info{
+    display: block;
+    float: left;
+    width: 30%;
+    height: 100%;
+
+
+}
+        #img_info{
+            display: block;
+            margin: auto;
+            margin-top:8%;
+            margin-bottom:8%;
+            width: 75%;
+            height: 40%;
+            
+        
+        }
+        #img_centro{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        #side_info_top{
+            display: block;
+            margin-top: 5%;
+            width: 100%;
+            height:22%;
+             
+        }
+
+        #side_info_bottom{
+            display: block;
+            margin-top: 5%;
+            width: 100%;
+            height:22%;
+         
+        }
+
+
+#top_info{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50%;
+  
+}
+    #top_top_info{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 39%;
+   
+    }
+    #nombre_institucion{
+        color: #3498db;
+        display: block;
+        font-size: 55px;
+        padding-top: 35px;
+        padding-left: 35px;
+       
+    }
+    #titulo_ubicacion, #titulo_contacto{
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 11%;
+        color: rgb(231, 231, 231);;
+        border-top: solid 1px;
+    }   
+    #provincia_institucion, #canton_institucion, #distrito_institucion, #telefono_institucion, #web_institucion, #fax_institucion{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-left: 11%;
+       
+    }
+    #top_bottom_info{
+        display: block;
+        float: left;
+        width: 97%;
+        height: 50%;
+        border: solid 1px rgb(231, 231, 231);
+        border-radius: 5px;
+
+    }
+     #direccion_institucion, #fundacion{
+        font-size: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+        padding-left: 5%;
+       
+    }
+
+#bottom_info{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50%;
+
+}
+#nombre_inscrito, #generos, #idiomas, #tipo, #cedula_juridica, #ideologia, #referencia{
+    font-size: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 5%;
+ 
+}
+
+
+
+/*-----------------------------TABS-------------------------------*/
+.container{
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 275px;
+}
+#form_contenedor label{
+    font-size: 20px;
+   
+}
+#form_contenedor input{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#form_contenedor label, input{
+    margin-top: 33px;
+}
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 25px;
+}
+ul.tabs li{
+    background: none;
+    color:#3498db;
+    display: inline-block;
+    padding: 35px 35px;
+    cursor: pointer;
+}
+ul.tabs li:hover{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    scale: 1.1px;
+}
+ul.tabs li.current{
+    background-color: #eeeeee;
+    color: #216592;
+    border-radius: 10px;
+    transform: scale(1.050);
+}
+
+.tab-content{
+    display: none;
+    padding: 15px;
+    overflow-y: scroll;
+    width: 1200px;
+    height: 450px;
+    margin-top: 40px;
+    border: solid 1px rgb(231, 231, 231);
+    border-radius: 5px;
+}
+#top_bottom_info li{
+    list-style-type: none;
+    color: rgb(51, 51, 51)
+}
+.tab-content.current{
+    display: inherit;
+}
+
+#form_contenedor_comentarios{
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    width: 101%;
+    height: 100%;
+    background-color: #fff; 
+    border-radius: 5px; 
+}
+
+.modificar_perfil{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    float: right;
+    background-color: #3498db;
+    padding: 20px;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #f1f2f6;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #2f3542;
+    border-style: ridge;
+    
+  }
+  table thead th{
+      background-color: #2f3542;
+    }
+   
+  
+table td, table th {
+    border-width: 1px;
+    
+        background-color: #fff;
+    padding: 15px;
+  }
+table th{
+      font-size: 20px;
+    color: #f1f2f6;
+  }
+table td{
+      word-break: normal;
+    text-align: center;
+    font-size: 15px;
+    border-style: solid;
+}
+table img{
+    width: 125px;
+    height: 125px;
+    border: solid 2px;
+}
+/**
+
+
+#listas_de_institucion{
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    background-color: #3b3a36;
+    bottom: 0;
+}
+#sct_usuario{   
+    display: block;
+    float: left;
+    width: 88%;
+    height: 90%;
+}
+
+.institucion_imagen_div{
+    width: 100%;
+    height: 500px;
+    
+}
+.institucion_imagen_div img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.info_div_container{
+    width: 100%;
+    height: 180px;
+    background-color: #3b3a36;
+}
+.info_div_tipo{
+    float: left;
+    width: 25%;
+    height: 70%;
+    box-shadow: 0 0 1px;
+    background: url('../img/perfil_institucion/tipo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.institucion_nombre{
+    display: block;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 10px;
+    background-color: #3b3a36;
+    color: #fff;
+}
+.info_div_idioma{
+    float: left;
+    width: 25%;
+    height: 70%;
+    box-shadow: 0 0 1px;
+    background: url('../img/perfil_institucion/idioma.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.info_div_genero{
+    float: left;
+    width: 25%;
+    height: 70%;
+    box-shadow: 0 0 1px;
+    background: url('../img/perfil_institucion/genero.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.info_div_provincia{
+    float: left;
+    width: 25%;
+    height: 70%;
+    box-shadow: 0 0 1px;
+    background: url('../img/perfil_institucion/provincia.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}   
+.info_div{
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 30%;
+    background-color: #3b3a36;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 0 0 1px black;
+}
+.info{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 80px;
+    float: right;
+    width: 45%;
+    height: 47px;
+    text-align: center;
+    background-color: #3b3a36;
+    color: #fff;
+    border: solid 1px black;
+    border-radius: 100px;
+    font-size: 30px;
+    padding-top: 7px;
+}
+.info_referencia{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 80px;
+    float: right;
+    width: 45%;
+    height: 190px;
+    text-align: center;
+    background-color: #3b3a36;
+    color: #fff;
+    border: solid 1px black;
+    border-radius: 20px;
+    font-size: 13px;
+    padding-top: 7px;
+
+
+}
+.info_direccion, .info_direccion_web{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 80px;
+    float: right;
+    width: 45%;
+    height: 47px;
+    text-align: center;
+    background-color: #3b3a36;
+    color: #fff;
+    border: solid 1px black;
+    border-radius: 100px;
+    font-size: 12px;
+    padding-top: 7px;
+}
+.div_info_izquierda{
+    float: left;
+    width: 50%;
+    height: 90vh;
+
+}
+.div_info_derecha{
+    float: right;
+    width: 50%;
+    height: 90vh;
+
+}
+.label{
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 40px;
+    float: left;
+    width: 30%;
+    height: 47px;
+    padding-top: 7px;
+    text-align: center;
+    background-color: #3b3a36;
+    color: #c0dfd9;
+    border: solid 1px black;
+    border-radius: 100px;
+    font-size: 25px;
+}
+#seccion{
+    display: inline-block;
+    width: 33%;
+    height: 195px;
+    margin-top: 30px;
+}
+#img_utiles{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: url(../img/perfil_institucion/util.png);
+    background-size: cover;
+}
+#img_preguntas{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: url(../img/perfil_institucion/preguntas.png);
+    background-size: cover;
+}
+#img_actividades{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: url(../img/perfil_institucion/actividad.png);
+    background-size: cover;
+}
+#img_citas{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: url(../img/perfil_institucion/citas.png);
+    background-size: cover;
+}
+button{
+    display: block;
+    width: 200px;
+    height: 32px;
+    margin-top: 10px;
+    margin-left: 28%;
+    text-align: center;
+    background-color: #c0dfd9;
+    color: #3b3a36;
+    border: none;
+    border-radius: 100px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.ocultar{
+    display: none;
+}
+.mostrar{
+    display: block;
+}

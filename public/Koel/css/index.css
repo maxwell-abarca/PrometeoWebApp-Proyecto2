@@ -1,0 +1,84 @@
+/*Este archivo .css contiene el estilo de la pagina principal llamada "index.html"*/
+html{
+    /*Fuente utilizada en todo el html*/
+    font-family: 'Montserrat', sans-serif;
+}
+.div_img{/*Imagen principal de la cabecera*/
+    width: 100%; /*Ancho de la imagen principal, cubriendo un 100% del ancho de la pagina*/
+    height: 400px; /*La altura de la imagen principal*/
+    background-image: url(../img/index_div_img.jpg);    /*Ruta de la imagen*/
+    background-size: cover;/*Tamaño de la imagen, que haga la función de de cubrir el espacio utilizado*/
+}
+.div_img h1{/*Titulo Principal*/
+    padding-top: 60px; /*Distancia o espacio desde arriba de 60px, hasta donde comienza el texto*/
+    text-align: left; /*Alineamiento del texto del lado izquierdo*/
+    vertical-align: middle; /*Alineamiento del texto en el medio verticalmente*/
+    font-size: 300px; /*Tamaño de letra de 300px*/
+    color: white; /*Color del texto*/
+    
+}
+.bottom_div{/*Cuerpo Restante de la pagina*/
+    width: 100%; /*Ancho del espacio restante de la pagina */
+    height: 100%; /*Largo restante de la pagina verticalmente*/
+    background-color: #3d3d3d; /*Color del cuerpo restante de la pagina*/
+}
+p{
+    text-align: center;
+}
+#p_1{/*Párrafos del Cuerpo Restante de la pagina*/
+    padding-top: 50px; /*Distancia en pixels desde la parte superior hasta donde empieza el texto*/
+    font-size: 50px;/*Tamaño de fuente*/
+    color: white;/*Color del párrafo*/
+    padding-bottom: 50px;
+}
+#p_2{/*Párrafos del Cuerpo Restante de la pagina*/
+    padding-top: 35px; /*Distancia en pixels desde la parte superior hasta donde empieza el texto*/
+    font-size: 35px;/*Tamaño de fuente*/
+    color: white;/*Color del párrafo*/
+    }
+#imagen_prometeo{
+    width: 60%;
+    height: 373px;
+    border: solid 8px #222;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    background: url('../img/prometeo.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#prometeo_button{
+    display: block;
+    margin: 100px;
+    width: 400px;
+    height: 75px;
+    font-size: 60px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background-color: #c0dfd9;
+    color: #3b3a36;
+}
+#prometeo_button:hover{
+    background-color: #3b3a36;
+    color: #c0dfd9;
+    
+}
+
+.h_vision_mision{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+.vision_mision{
+    margin-left: 24%;
+    width: 55%;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 28px;
+}

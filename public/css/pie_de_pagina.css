@@ -1,0 +1,67 @@
+
+
+#pie_de_pagina{
+    width: 100%;
+    height: 365px;
+    background-color:  rgb(71, 71, 135);
+}
+#pie_de_pagina_carta{
+    text-align: center;
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.pie_de_pagina_imagen{
+    display:block;
+    margin: auto;
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    
+}
+#pie_de_pagina_nosotros{
+    background: url('../img/pie_de_pagina/sobre_nosotros.png');   
+    background-size: contain;
+}
+#pie_de_pagina_contacto{
+    background: url('../img/pie_de_pagina/contacto.png'); 
+    background-size: contain;  
+}
+#pie_de_pagina_navegacion{
+    background: url('../img/pie_de_pagina/navegacion.png');
+    background-size: contain;   
+}
+#pie_de_pagina_mep{
+    width: 160px;
+    height: 160px;
+    margin-top: 25px;
+    background: url('../img/pie_de_pagina/mep.png');
+    background-size: contain;
+}
+#info_pie_de_pagina{
+    font-size: 37px;
+    padding: 10px;
+    padding-top: 40px;
+    color: white;
+}
+#pie_de_pagina_carta p{
+    padding: 20px;
+    font-size: 17px;
+    color: whitesmoke;
+}
+#pie_de_pagina_carta li{
+    padding-top: 20px;
+    font-size: 17px;
+    color: whitesmoke;
+}
+#pie_de_pagina_carta a{
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+}
+#pie_de_pagina_carta a:hover{
+    transition: all 2s ease-in-out;
+    transform: scale('1.1');
+}

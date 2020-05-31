@@ -1,0 +1,116 @@
+.error_input{
+    border: solid 1px red;
+}
+html{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #2c2c54;
+}
+#info_p{
+    text-align: center;
+    font-size: 22px;  
+    color: rgb(151, 151, 151);
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#form_contenedor{
+    padding-top: 50px;
+    display: block;
+    margin: auto;
+    margin-bottom: 100px;
+    width: 65%;
+    height: 100%;
+    background-color: #fff; 
+    border-radius: 5px; 
+}
+#titulo_registro{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background-color: #2c2c54;
+}
+#input_txt{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    outline-color: #1abc9c;
+    text-align: center; 
+}
+#textarea_txt{
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 250px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 40px;
+    outline-color: #1abc9c;
+    resize: none;
+}
+#btn_atras, #btn_registrar, #btn_aceptar{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#btn_atras{
+    float: left;
+    background-color: #e74c3c;
+}
+#btn_registrar, #btn_aceptar{
+    float: right;
+    background-color: #3498db;
+}
+#contenedor_botones{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 51px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+label{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.image_holder{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+#image_preview{
+    border: solid 1px gray;
+}
+.idiomas #input_txt{
+    font-size: 25px;
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    background-color: #dfe4ea;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 400px;
+    border: none;
+    outline-color: #1abc9c;
+    text-align: center; 
+}

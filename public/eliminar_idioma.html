@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Eliminar ranking del MEP</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro_idiomas.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html">Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html">Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html">Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html">Perfil</a>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion">Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+        </nav>
+    </header>
+            <h1 id="titulo_registro">Eliminar idioma.</h1>
+    <div id="form_contenedor">
+
+    
+            <label for="input_idioma">
+                Nombre del idioma
+            </label>
+                <input type="text" id="input_txt">
+            
+            <label for="">Descripción del idioma</label>
+            <textarea name="" id="textarea_txt" ></textarea>
+
+        <div id="contenedor_botones">
+            <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/listar_idioma.html'">Atrás</button>
+            <button type="button" id="btn_registrar">Eliminar</button>
+        </div>
+        </div>
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/servicio_idioma.js"></script>
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_eliminar_idiomas.js"></script>
+<script src="js/controlador_direccion.js"></script>
+</html>

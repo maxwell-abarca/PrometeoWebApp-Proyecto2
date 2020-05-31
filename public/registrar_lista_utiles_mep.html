@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/registrar_lista_utiles_mep.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/Prometeo_logo.png">
+    <link rel="stylesheet" href="css/barra_navegacion.css">
+    <title>Registrar lista de útiles MEP</title>
+</head>
+
+<body>
+    <header>
+        <nav class="barra_navegacion" style="position:fixed">
+            <div class="imagen_barra_navegacion" onclick="window.location.href='index.html';"> </div>
+            <!--Visitante-->
+            <a href="http://localhost:3000/public/registro_padre.html"><i class="fas fa-male"></i> Registro padre</a>
+            <a href="http://localhost:3000/public/registro_institucion.html"><i class="fas fa-school"></i> Registro centros educativos</a>
+            <a href="http://localhost:3000/public/inicio_sesion.html"><i class="fas fa-key"></i> Iniciar sesión</a>
+            <!--Conectado-->
+            <a href="http://localhost:3000/public/perfil.html"><img class="user_img" src="img/user.png" style="width: 50px; height: 50px; margin: -22px;margin-right: 10px;"> Perfil</a>
+
+            <style type="text/css">
+            .estilo_imagen{
+                border-radius: 100px;
+            }
+            </style>
+            <a href="http://localhost:3000/public/perfil_padre.html">Perfil</a>
+            <a href="http://localhost:3000/public/buscar_infomacion.html">Buscar</a>
+            <a onclick="cerrar_sesion()" id="btn_cerrar_sesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            <script type="text/javascript">
+                function cerrar_sesion() {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+            </script>
+            <a onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Inicio</a>
+        </nav>
+    </header>
+
+
+    <div id="form_contenedor">
+        <form id="frm_utiles">
+             <h1 id="titulo_registro">Registrar lista de útiles MEP.</h1>
+            
+            <p id="info_p">Puede registrar los útiles para los centros educativos, debe seleccionar o escribir el nombre del útil, la cantidad y la descripción.</p>
+            <hr>
+            <!-- <h2>Seleccione los útiles necesarios.</h2>
+            <label class="lbl_utiles" for="util_1">Cuaderno de 100 hojas</label>
+            <input type="checkbox" id="util_1">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_1">
+
+            <label class="lbl_utiles" for="util_2">Juego de geometría</label>
+            <input type="checkbox" id="util_2">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_2">
+
+            <label class="lbl_utiles" for="util_3">Caja con lápices de colores</label>
+            <input type="checkbox" id="util_3">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_3">
+
+            <label class="lbl_utiles" for="util_4">Compas</label>
+            <input class="class_check" type="checkbox" id="util_4">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_4">
+
+            <label class="lbl_utiles" for="util_5">Tijera escolar</label>
+            <input class="class_check" type="checkbox" id="util_5">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_5">
+
+            <label class="lbl_utiles" for="util_6">Borrador de lápiz</label>
+            <input type="checkbox" id="util_6">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_6">
+
+            <label class="lbl_utiles" for="util_7">Goma blanca</label>
+            <input type="checkbox" id="util_7">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_7">
+
+            <label class="lbl_utiles" for="util_8">Folder tamaño carta</label>
+            <input class="class_check" type="checkbox" id="util_8">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_8">
+
+            <label class="lbl_utiles" for="util_9">hojas blancas</label>
+            <input class="class_check" type="checkbox" id="util_9">
+
+            <label class="lbl_utiles"for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_9">
+
+            <label class="lbl_utiles" for="util_10">Diccionario</label>
+            <input class="class_check" type="checkbox" id="util_10">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_10">
+
+            <label class="lbl_utiles" for="util_11">Papel de construcción</label>
+            <input type="checkbox" id="util_11">
+
+            <label class="lbl_utiles" for="nmb_util">Cantidad</label>
+            <input class="class_check" type="number" id="nmb_util_11"> -->
+<!-- 
+            <hr>
+
+            <h2>Registrar útiles.</h2> -->
+
+            <label for="txt_nombre">Nombre del útil</label>
+            <input class="class_input" type="text" id="txt_nombre_util" maxlength="60">
+        
+            <label for="txt_lugar">Cantidad</label>
+            <input class="class_input" type="number" id="nmb_util" maxlength="60">
+       
+            <label for="txt_descripcion">Descripción del útil</label>
+            <textarea class="class_textarea" id="txt_descripcion"></textarea>
+       
+                <div class="contenedor_botones">
+                     <button class="btn_registrar" type="button" id="btn_aceptar">Aceptar</button>
+                     <button class="btn_atras" type="button" id="btn_atras" onclick="window.location.href='http://localhost:3000/public/index.html'">Atrás</button>
+                </div>
+
+    </div>   
+    
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicios_lista_utiles_mep.js"></script>
+<script src="js/servicio_inicio.js"></script>
+<script src="js/controlador_registrar_lista_utiles_mep.js"></script>
+<script src="js/controlador_barra_navegacion.js"></script>
+<script src="js/controlador_imagen_sesion.js"></script>
+<script src="js/controlador_direccion.js"></script>
+</html>
